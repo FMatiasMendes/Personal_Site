@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="styles/pages/homepage.css">
 </head>
 <body>
-    
+	<header>
+			<nav>
+					<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#services">Services</a></li>
+							<li>
+									<a href="#projects" class="dropdown-toggle">Projects</a>
+									<ul class="dropdown">
+											<li><a href="#project1">Project 1</a></li>
+											<li><a href="#project2">Project 2</a></li>
+											<li><a href="#project3">Project 3</a></li>
+									</ul>
+							</li>
+							<li><a href="#contact">Contact</a></li>
+					</ul>
+			</nav>
+	</header>
+
+	<main>
+			<h1>Welcome to My Website</h1>
+			<p>This is a simple webpage where you can learn more about me and my work.</p>
+			<img src="image-placeholder.jpg" alt="Description of the image">
+	</main>
+
+	<footer>
+			<p>&copy; 2024 Your Name. All rights reserved.</p>
+	</footer>
+
+	<script>
+			// Script for dropdown functionality
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+			const dropdown = document.querySelector('.dropdown');
+
+			dropdownToggle.addEventListener('click', function(event) {
+					event.preventDefault();
+					dropdown.classList.toggle('show');
+			});
+
+			window.addEventListener('click', function(event) {
+					if (!dropdownToggle.contains(event.target) && !dropdown.contains(event.target)) {
+							dropdown.classList.remove('show');
+					}
+			});
+	</script>
 </body>
 </html>

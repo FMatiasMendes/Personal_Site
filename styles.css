@@ -1,0 +1,144 @@
+/* Resetting body and html heights */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #4CAF50; /* Header color */
+    height: 60px; /* Define a altura do cabeçalho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: height 0.3s ease; /* Smooth transition for header height */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px;
+    justify-content: center; /* Centering nav links */
+}
+
+.menu-icon {
+    display: none; /* Hide icon by default */
+    font-size: 24px;
+    color: #fff; /* Icon color for visibility */
+    cursor: pointer;
+    position: absolute;
+    right: 15px; /* Positioning the icon */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 5px; /* Espaçamento entre os links */
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    transition: transform 0.3s ease; /* Scale link text without affecting others */
+    display: inline-block; /* Ensures padding is respected */
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Change to absolute to position it below the parent */
+    top: 100%; /* Position it directly below the parent item */
+    left: 0; /* Align to the left */
+    background-color: #4CAF50; /* Dropdown background color */
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown li {
+    text-align: left;
+}
+
+.dropdown li a {
+    padding: 12px;
+    display: block;
+}
+
+nav li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+main {
+    max-width: 1400px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    transition: margin-top 0.3s ease; /* Smooth transition for margin */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show icon in mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Column layout when active */
+        width: 100%; /* Full width in mobile */
+        background-color: #4CAF50; /* Green background for mobile */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+        z-index: 10; /* Ensure it appears above other elements */
+        align-items: center; /* Centraliza os links */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+        padding: 0; /* Spacing for links */
+    }
+
+    .nav-links li a {
+        padding: 10px;
+    }
+
+    .nav-links li {
+        margin: 2px 0; /* Espaçamento reduzido entre os links */
+        text-align: center; /* Center text when collapsed */
+    }
+
+    /* Ajustes para o dropdown no modo responsivo */
+    .dropdown {
+        left: 0; /* Alinha o dropdown à esquerda */
+        width: 100%; /* Garante que o dropdown tenha 100% de largura */
+    }
+}

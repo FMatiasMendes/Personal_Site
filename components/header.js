@@ -7,7 +7,7 @@ document.querySelector('.js-header').innerHTML = `
 				<a href="#">Projects</a>
 				<ul class="dropdown">
 					<li>
-						<a href="project1.html">Project 1</a>
+						<a href="project1.html">Construction Company Website</a>
 					</li>
 					<li>
 						<a href="project2.html">Project 2</a>

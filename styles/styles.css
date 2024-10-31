@@ -1,20 +1,26 @@
+:root {
+	--background-color: rgb(255, 255, 255);
+  --header-color: #55cd59; /* Define a root variable for primary color */
+}
+
+
 /* Resetting body and html heights */
 html, body {
     height: 100%;
     margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     padding: 0;
-    background-color: #f9f9f9; /* Light background */
+    background-color: var(--background-color); /* Light background */
     color: #333;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: #4CAF50; /* Header color */
+    background-color: var(--header-color); /* Header color */
     height: 60px; /* Define a altura do cabeçalho */
     display: flex;
     align-items: center;
@@ -43,6 +49,7 @@ nav {
 }
 
 .nav-links {
+	font-size: 22px;
     list-style: none;
     display: flex;
     padding: 0;
@@ -52,25 +59,37 @@ nav {
 
 .nav-links li {
     position: relative;
-    margin: 0 5px; /* Espaçamento entre os links */
+    margin: 0px 50px; /* Espaçamento entre os links */
+		list-style-type: none;
 }
 
 .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    transition: transform 0.3s ease; /* Scale link text without affecting others */
-    display: inline-block; /* Ensures padding is respected */
+	color: #fff;
+	text-decoration: none;
+	padding: 15px;
+	transition: transform 0.1s ease; /* Transição suave */
+	display: inline-block; /* Garante que o padding seja respeitado */
+	margin: 0px;
+	width: fit-content;
+}
+
+.nav-links li a:hover {
+	transform: scale(1.1); /* Aumenta ligeiramente o tamanho do texto */
+	transition: transform 0.1s ease-in-out; /* Transição suave */
 }
 
 .dropdown {
     display: none; /* Hide dropdown by default */
     position: absolute; /* Change to absolute to position it below the parent */
     top: 100%; /* Position it directly below the parent item */
-    left: 0; /* Align to the left */
-    background-color: #4CAF50; /* Dropdown background color */
-    min-width: 150px;
+    background-color: var(--header-color); /* Dropdown background color */
+		min-width: max-content; /* Garante que o dropdown se ajusta ao conteúdo */
+		width: fit-content;  
     z-index: 1;
+		opacity: 0.9;
+		font-size: 16px;
+		padding: 5px 0; /* Espaçamento vertical */
+		white-space: nowrap;
 }
 
 .dropdown li {
@@ -78,8 +97,9 @@ nav {
 }
 
 .dropdown li a {
-    padding: 12px;
+    padding: 10px 0px;
     display: block;
+		margin-left: 0px;
 }
 
 nav li:hover .dropdown {
@@ -95,11 +115,22 @@ main {
     transition: margin-top 0.3s ease; /* Smooth transition for margin */
 }
 
+main img{
+	width: 250px;
+}
+
+.generic_text{
+	width: 80%;
+	text-align: justify;
+	margin: 80px auto;
+}
+
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
+    padding: 0px;
+    background-color: var(--background-color);
+    color: black;
+		font-size: 14px;
 }
 
 /* Responsive styles */
@@ -112,7 +143,7 @@ footer {
         display: none; /* Hide links by default */
         flex-direction: column; /* Column layout when active */
         width: 100%; /* Full width in mobile */
-        background-color: #4CAF50; /* Green background for mobile */
+        background-color: var(--header-color); /* Green background for mobile */
         padding: 0; /* Remove padding */
         margin: 0; /* Remove margin */
         position: absolute; /* Position absolutely */
@@ -129,6 +160,7 @@ footer {
 
     .nav-links li a {
         padding: 10px;
+				margin: auto;
     }
 
     .nav-links li {
@@ -139,6 +171,8 @@ footer {
     /* Ajustes para o dropdown no modo responsivo */
     .dropdown {
         left: 0; /* Alinha o dropdown à esquerda */
-        width: 100%; /* Garante que o dropdown tenha 100% de largura */
+        width: 100vw; /* Garante que o dropdown tenha 100% de largura */
+				position: relative;
+				
     }
 }

@@ -6,9 +6,15 @@ document.querySelector('.js-header').innerHTML = `
 			<li>
 				<a href="#">Projects</a>
 				<ul class="dropdown">
-					<li><a href="project1.html">Project 1</a></li>
-					<li><a href="project2.html">Project 2</a></li>
-					<li><a href="project3.html">Project 3</a></li>
+					<li>
+						<a href="project1.html">Project 1</a>
+					</li>
+					<li>
+						<a href="project2.html">Project 2</a>
+					</li>
+					<li>
+						<a href="project3.html">Project 3333 3333</a>
+					</li>
 				</ul>
 			</li>
 			<li><a href="#">About</a></li> 

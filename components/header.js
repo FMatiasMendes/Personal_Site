@@ -2,7 +2,7 @@ document.querySelector('.js-header').innerHTML = `
 	<nav>
 		<div class="menu-icon">☰</div>
 		<ul class="nav-links">
-			<li><a href="#">Home</a></li>
+			<li><a href="index.html">Home</a></li>
 			<li>
 				<a href="#">Projects</a>
 				<ul class="dropdown">
@@ -17,8 +17,8 @@ document.querySelector('.js-header').innerHTML = `
 					</li>
 				</ul>
 			</li>
-			<li><a href="#">About</a></li> 
-			<li><a href="#">Contact</a></li>
+			<li><a href="about.html">About</a></li> 
+			<li><a href="contacts.html">Contacts</a></li>
 		</ul>
 	</nav>
 	`

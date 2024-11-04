@@ -13,9 +13,6 @@ document.querySelector('.js-header').innerHTML = `
 						<a href="/projects/paper_rock_scissors/index.html" target="_blank">Paper, Rock, Scissors Game</a>
 					</li>
 					<li>
-						<a href="/projects/calculator/index.html" target="_blank">Online Calculator</a>
-					</li>
-					<li>
 						<a href="/projects/temperature_converter/index.html" target="_blank">Temperature Converter</a>
 					</li>
 				</ul>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Temperature Converter</title>
+			<!-- Favicon -->
+			<link rel="shortcut icon" href="../../../images/FM_Logo_Favicon.jpg" type="image/x-icon">
+			<!-- CSS -->
+			<link rel="stylesheet" href="style.css">			
+	</head>
+
+	<body>
+
+		<h1>TEMPERATURE CONVERTER</h1>
+
+		<div class="div_1">
+			<div class="div_ecra">
+				<p class="ecra"></p>
+				<p>&nbsp C</p><!-- &nbsp for blank space -->
+			</div>
+
+			<div class="botoes">
+				<button class="tecla" onclick="teclar(1)">1</button>
+				<button class="tecla" onclick="teclar(2)">2</button>
+				<button class="tecla" onclick="teclar(3)">3</button>
+				<br>
+				<button class="tecla" onclick="teclar(4)">4</button>
+				<button class="tecla" onclick="teclar(5)">5</button>
+				<button class="tecla" onclick="teclar(6)">6</button>
+				<br>
+				<button class="tecla" onclick="teclar(7)">7</button>
+				<button class="tecla" onclick="teclar(8)">8</button>
+				<button class="tecla" onclick="teclar(9)">9</button>
+				<br>
+				<button class="tecla" onclick="teclar(0)">0</button>
+				<button class="tecla" onclick="virgula()">.</button>
+				<button class="tecla" onclick="negativo()">-</button>
+				<button class="tecla" onclick="apagar()">CLR</button>
+			</div>
+		</div>
+
+		<div class="div_2">
+				<h3></h3>
+				<div id="saida"></div>
+		</div>
+		
+		<script src="scrypt.js"></script>
+
+	</body>
+</html>

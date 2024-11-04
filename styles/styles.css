@@ -27,6 +27,9 @@ header {
 	justify-content: center;
 	position: relative;
 	transition: height 0.3s ease; /* Smooth transition for header height */
+
+
+	border: 1px solid blue;
 }
 
 nav {
@@ -36,6 +39,9 @@ nav {
 	max-width: 1400px;
 	padding: 0 20px;
 	justify-content: center; /* Centering nav links */
+
+
+	border: 1px solid red;
 }
 
 .menu-icon {
@@ -149,7 +155,18 @@ main img{
 }
 
 .social-links a:hover {
-	color: var(--header-color);; 
+	color: var(--header-color); 
+}
+
+.project_links{
+	text-decoration: none;
+	color: #333;
+	font-size: 22px; 
+	transition: color 0.3s;
+}
+
+.project_links:hover {
+	color: var(--header-color); 
 }
 
 footer {

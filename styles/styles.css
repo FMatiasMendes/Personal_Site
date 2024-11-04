@@ -60,18 +60,22 @@ nav {
 
 .nav-links li {
 	position: relative;
-	margin: 0px 50px;
+	margin: 0px 45px;
 	list-style-type: none;
+
+
 }
 
 .nav-links li a {
 	color: #fff;
 	text-decoration: none;
-	padding: 15px;
+	padding: 5px;
 	transition: transform 0.1s ease;
 	display: inline-block;
 	margin: 0px;
 	width: fit-content;
+
+
 }
 
 .nav-links li a:hover {
@@ -171,6 +175,7 @@ footer {
 	background-color: var(--background-color);
 	color: black;
 	font-size: 14px;
+	margin-top: 30px;
 }
 
 /* Responsive styles */
@@ -197,6 +202,7 @@ footer {
 	.nav-links.active {
 		display: flex;
 		padding: 0;
+
 	}
 
 	.nav-links li a {
@@ -232,6 +238,10 @@ footer {
 		text-align: justify;
 		margin: 80px auto;
 		font-size: 16px;
+	}
+
+	.project_links{
+		font-size: 18px; 
 	}
 
 	.email{

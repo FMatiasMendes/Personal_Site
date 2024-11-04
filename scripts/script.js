@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         parentLi.addEventListener("click", function (event) {
             event.stopPropagation(); // Previne o clique no pai
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";           
         });
     });
 

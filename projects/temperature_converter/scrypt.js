@@ -1,6 +1,6 @@
 var ecra = document.querySelector(".ecra");
 
-function calcular(){
+function calculate(){
 
 	let celsius = ecra.innerHTML;
 	let saida = document.querySelector("#saida");
@@ -10,51 +10,50 @@ function calcular(){
 
 	saida.innerHTML = `<p>${parseFloat(celsius).toFixed(2)} C = ${f.toFixed(2)} F</p>`;
 	saida.innerHTML += `<p>${parseFloat(celsius).toFixed(2)} C = ${kelvin.toFixed(2)} K</p>`;
-
 }
 
-function teclar(num){
+function key(num){
 
-	//executar limitando a um maximo de 10 caracteres
+	//limits to 10 characters
 	if (ecra.innerHTML.length < 10){
-		//mantém "0" no ecrã se o primeiro numero inserido for "0" e os restantes também
+		//keeps "0" on screen if first inserted number is 0 and also the others
 		if (num == 0 && ecra.innerHTML.includes(0) && ecra.innerHTML.length == 1){
 			ecra.innerHTML = 0;
 		}
-		//se o primeiro numero for 0 e o segundo for diferente, escreve o segundo e apaga o primeiro
+		//if the first number is 0 and second one different, deletes the first and writes the second
 		else if (ecra.innerHTML.length == 1 && num != 0 && ecra.innerHTML.includes(0)){
 			ecra.innerHTML = `${num}`;
 		}
-		//se o primeiro valor for "-" e o segundo for "0", mantém "-0" enquanto o numero inserido não for diferente de "0"
+		//If the first value is '-' and the second is '0', keep '-0' as long as the entered number is not different from '0'
 		else if (ecra.innerHTML.length == 2 && ecra.innerHTML.includes("-0") && num == 0){
 			ecra.innerHTML = `-0`;
 		}
-		//se o primeiro valor for "-" e o segundo for "0" e o numero inserido for diferente de "0", escreve "-" seguido do numero inserido
+		//If the first value is '-' and the second is '0' and the entered number is different from '0', write '-' followed by the entered number
 		else if (ecra.innerHTML.length == 2 && ecra.innerHTML.includes("-0") && num != 0){
 			ecra.innerHTML = `-${num}`;
 		}
-		//acrescenta os restantes numeros
+		//add the remaining numbers
 		else{
 			ecra.innerHTML += `${num}`;
 		}
 
-		calcular();
+		calculate();
 	}
 }
 
-function virgula(){
+function point(){
 	if (!ecra.innerHTML.includes(".")){
 			ecra.innerHTML += ".";
 	}
 }
 
-function negativo(){
+function negative(){
 	if (!ecra.innerHTML.includes("-") && ecra.innerHTML.length == 0 || ecra.innerHTML.includes(0) && ecra.innerHTML.length == 1){
 			ecra.innerHTML = "-";
 	}
 }
 
-function apagar(){
+function erase(){
 	let saida = document.querySelector("#saida");
 
 	ecra.innerHTML = "";

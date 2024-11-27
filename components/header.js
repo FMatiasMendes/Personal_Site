@@ -10,6 +10,9 @@ document.querySelector('.js-header').innerHTML = `
 						<a href="project1.html">Construction Company Website</a>
 					</li>
 					<li>
+						<a href="/projects/stock_management_Site/index.php" target="_blank">Stock Management</a>
+					</li>
+					<li>
 						<a href="/projects/paper_rock_scissors/index.html" target="_blank">Paper, Rock, Scissors Game</a>
 					</li>
 					<li>

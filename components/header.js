@@ -18,6 +18,9 @@ document.querySelector('.js-header').innerHTML = `
 					<li>
 						<a href="/projects/temperature_converter/index.html" target="_blank">Temperature Converter</a>
 					</li>
+					<li>
+						<a href="/projects/Weather_App/index.html" target="_blank">Weather App</a>
+					</li>
 				</ul>
 			</li>
 			<li><a href="about.html">About</a></li> 
